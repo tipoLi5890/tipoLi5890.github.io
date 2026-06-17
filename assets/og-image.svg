@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#16181d"/>
+  <rect width="14" height="1200" fill="#d4663b"/>
+  <g font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+    <text x="80" y="560" font-size="92" font-weight="800" fill="#ffffff">CHING-YU LI</text>
+    <text x="82" y="636" font-size="50" font-weight="500" fill="#d4663b" font-family="'PingFang TC','Heiti TC','STHeiti', sans-serif">李慶昱 · tipo</text>
+    <text x="82" y="724" font-size="33" font-weight="600" fill="#ffffff" opacity="0.9">Software &amp; Hardware Integration Engineer</text>
+    <text x="82" y="770" font-size="26" font-weight="500" fill="#d4663b">Full-Stack Development · AI</text>
+    <text x="82" y="862" font-size="22" font-weight="500" fill="#ffffff" opacity="0.5">tipoli5890.github.io</text>
+  </g>
+</svg>

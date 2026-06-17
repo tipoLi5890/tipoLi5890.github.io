@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ching-Yu Li 李慶昱</title>
+<meta name="description" content="Ching-Yu Li 李慶昱 (tipo) — 軟硬體整合工程師。全端開發、AI 應用。Software & hardware integration engineer: full-stack development and AI." />
+<meta name="theme-color" content="#16181d" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2316181d'/%3E%3Ctext x='50' y='71' font-size='58' text-anchor='middle' fill='%23d4663b' font-family='system-ui,sans-serif' font-weight='700'%3E李%3C/text%3E%3C/svg%3E" />
+
+<!-- Open Graph / social sharing -->
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Ching-Yu Li 李慶昱" />
+<meta property="og:description" content="軟硬體整合工程師 · 全端開發 · AI 應用 / Software & Hardware Integration Engineer · Full-Stack · AI" />
+<meta property="og:url" content="https://tipoli5890.github.io/" />
+<meta property="og:locale" content="zh_TW" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:image" content="https://tipoli5890.github.io/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://tipoli5890.github.io/assets/og-image.png" />
+
+<!-- Set language as early as possible to avoid a flash of the wrong language -->
+<script>
+  (function () {
+    try {
+      var l = localStorage.getItem('resume-lang') ||
+        ((navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en');
+      document.documentElement.setAttribute('data-lang', l);
+      document.documentElement.setAttribute('lang', l === 'zh' ? 'zh-Hant' : 'en');
+    } catch (e) { document.documentElement.setAttribute('data-lang', 'zh'); }
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#16181d;
+    --paper:#ffffff;
+    --accent:#d4663b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Sora","Noto Sans TC",sans-serif;
+    background:var(--paper);color:var(--ink);
+    line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+
+  /* language visibility (toggled via [data-lang] on <html>) */
+  html[data-lang="zh"] [lang="en"]{display:none;}
+  html[data-lang="en"] [lang="zh"]{display:none;}
+
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px;}
+
+  .layout{display:grid;grid-template-columns:340px 1fr;min-height:100vh;}
+
+  /* ============ sidebar ============ */
+  .side{background:var(--ink);color:var(--paper);padding:40px 36px 44px;position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;}
+  .side-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;}
+  .name{font-weight:800;font-size:2.05rem;line-height:1.04;letter-spacing:-.01em;}
+  .name-en{color:var(--accent);font-size:.92rem;font-weight:500;letter-spacing:.16em;margin-top:9px;}
+  .handle{display:inline-block;margin-top:14px;font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--accent);border:1px solid rgba(212,102,59,.55);border-radius:999px;padding:3px 13px;}
+  .role{margin-top:16px;color:rgba(255,255,255,.74);font-size:.95rem;line-height:1.55;}
+
+  .lang-toggle{display:inline-flex;align-items:center;gap:9px;font-size:.82rem;letter-spacing:.03em;flex:none;}
+  .lang-toggle button{background:none;color:rgba(255,255,255,.45);border:none;padding:2px 1px;font:inherit;font-weight:600;cursor:pointer;transition:color .15s;}
+  .lang-toggle button:hover{color:rgba(255,255,255,.85);}
+  .lang-toggle button[aria-pressed="true"]{color:var(--accent);}
+  .lang-toggle .sep{color:rgba(255,255,255,.22);}
+
+  .side-block{margin-top:32px;}
+  .side-h{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:15px;}
+  .side a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25);transition:.15s;}
+  .side a:hover{border-color:var(--accent);color:var(--accent);}
+  .contact li{list-style:none;font-size:.88rem;margin-bottom:11px;word-break:break-word;}
+  .contact .lbl{display:block;color:rgba(255,255,255,.5);font-size:.72rem;letter-spacing:.04em;margin-bottom:2px;}
+  .skill li{list-style:none;font-size:.88rem;margin-bottom:13px;}
+  .skill li:last-child{margin-bottom:0;}
+  .skill .cat{color:rgba(255,255,255,.5);font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;display:block;margin-bottom:3px;}
+
+
+  /* ============ main ============ */
+  .main{padding:48px 56px 52px;max-width:1180px;}
+  section{margin-bottom:34px;}
+  h2{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:22px;display:flex;align-items:center;gap:14px;}
+  h2::after{content:"";flex:1;height:1px;background:rgba(22,24,29,.13);}
+
+  .entry{display:grid;grid-template-columns:168px 1fr;gap:6px 38px;}
+  .entry + .entry{margin-top:24px;padding-top:24px;border-top:1px solid rgba(22,24,29,.1);}
+  .entry-meta{font-size:.82rem;color:rgba(22,24,29,.55);padding-top:3px;}
+  .entry-meta .when{color:var(--accent);font-weight:600;font-variant-numeric:tabular-nums;}
+  .entry-meta .kind{display:block;text-transform:uppercase;letter-spacing:.05em;font-size:.72rem;margin-top:4px;color:rgba(22,24,29,.5);}
+
+  /* timeline of role-steps within one entry (Experience) */
+  .timeline{list-style:none;position:relative;margin:1px 0 0;}
+  .timeline li{position:relative;padding:0 0 18px 26px;}
+  .timeline li:last-child{padding-bottom:0;}
+  .timeline li::before{content:"";position:absolute;left:0;top:4px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--accent);z-index:1;}
+  .timeline li:first-child::before{background:var(--accent);}
+  .timeline li:not(:last-child)::after{content:"";position:absolute;left:5px;top:6px;bottom:-12px;width:2px;background:rgba(22,24,29,.18);}
+  .tl-role{display:block;font-weight:600;color:var(--ink);font-size:.9rem;}
+  .tl-date{display:block;color:var(--accent);font-size:.8rem;font-variant-numeric:tabular-nums;margin-top:1px;}
+
+  /* timeline node across dated entries (Research, Education) */
+  .entry.tl + .entry.tl{margin-top:30px;padding-top:0;border-top:none;}
+  .entry.tl .entry-meta{position:relative;padding-left:24px;}
+  .entry.tl .entry-meta::after{content:"";position:absolute;left:0;top:5px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--accent);z-index:1;}
+  .entry.tl:not(:last-of-type) .entry-meta::before{content:"";position:absolute;left:5px;top:5px;bottom:-36px;width:2px;background:rgba(22,24,29,.18);}
+
+  .entry-title{font-weight:700;font-size:1.1rem;line-height:1.42;}
+  .entry-title a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);}
+  .entry-title a:hover{color:var(--accent);}
+  .entry-sub{color:rgba(22,24,29,.6);font-size:.94rem;margin-top:3px;}
+  .lead{font-size:1.12rem;line-height:1.75;max-width:64ch;}
+
+  .bullets{margin:12px 0 0;padding-left:18px;}
+  .bullets li{margin-bottom:8px;}
+  .bullets li:last-child{margin-bottom:0;}
+  .bullets li::marker{color:var(--accent);}
+
+  .desc{margin-top:8px;color:rgba(22,24,29,.85);}
+  .muted{color:rgba(22,24,29,.58);font-size:.92rem;margin-top:5px;}
+  .links{margin-top:9px;font-size:.93rem;}
+  a.link{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);transition:.15s;}
+  a.link:hover{color:var(--accent);}
+
+  .foot{margin-top:44px;padding-top:18px;border-top:1px solid rgba(22,24,29,.1);color:rgba(22,24,29,.5);font-size:.82rem;}
+
+  @media (prefers-reduced-motion:no-preference){
+    .main section{animation:rise .55s ease both;}
+    .main section:nth-child(2){animation-delay:.06s}
+    .main section:nth-child(3){animation-delay:.12s}
+    .main section:nth-child(4){animation-delay:.18s}
+    .main section:nth-child(5){animation-delay:.24s}
+    .main section:nth-child(6){animation-delay:.3s}
+  }
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+  @media (max-width:860px){
+    .layout{grid-template-columns:1fr;}
+    .side{position:static;height:auto;padding:34px 26px 38px;}
+    .main{padding:34px 24px 60px;max-width:none;}
+    .entry{grid-template-columns:1fr;gap:10px;}
+    .entry-meta{padding-top:0;}
+    .entry.tl .entry-meta{padding-left:0;}
+    .entry.tl .entry-meta::before,.entry.tl .entry-meta::after{display:none;}
+    .entry.tl + .entry.tl{margin-top:0;padding-top:24px;border-top:1px solid rgba(22,24,29,.1);}
+  }
+
+  @media print{
+    :root{--accent:#000;}
+    .layout{grid-template-columns:280px 1fr;}
+    .side{background:#fff;color:#000;position:static;height:auto;border-right:1px solid #ccc;}
+    .side .role,.alias,.contact .lbl,.skill .cat{color:#333;}
+    .name-en,.side-h,.side a{color:#000;}
+    .side a{border:none;}
+    .lang-toggle{display:none;}
+    .main{max-width:none;}
+    h2{color:#000;}
+    .entry-meta .when,.role-step .d{color:#000;}
+    a.link,.entry-title a{color:#000;border:none;}
+    .main section{animation:none;break-inside:avoid;}
+  }
+</style>
+<noscript><style>[lang]{display:revert !important;} .lang-toggle{display:none;}</style></noscript>
+</head>
+<body>
+<div class="layout">
+  <aside class="side">
+    <div class="side-head">
+      <div>
+        <h1 class="name">李慶昱</h1>
+        <div class="name-en">CHING-YU LI</div>
+        <span class="handle">tipo</span>
+      </div>
+      <div class="lang-toggle" role="group" aria-label="Language / 語言切換">
+        <button type="button" data-lang-btn="zh" aria-pressed="true">中</button>
+        <span class="sep" aria-hidden="true">/</span>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+    <div class="role">
+      <span lang="zh">軟硬體整合工程師<br />全端開發 · AI 應用</span>
+      <span lang="en">Software &amp; Hardware Integration Engineer<br />Full-Stack Development · AI</span>
+    </div>
+
+    <div class="side-block">
+      <div class="side-h"><span lang="zh">聯絡</span><span lang="en">Contact</span></div>
+      <ul class="contact">
+        <li><span class="lbl"><span lang="zh">個人信箱</span><span lang="en">Personal</span></span><a href="mailto:tipo5890Li@gmail.com">tipo5890Li@gmail.com</a></li>
+        <li><span class="lbl"><span lang="zh">公司信箱</span><span lang="en">Work</span></span><a href="mailto:tipoli@genius-gh.com">tipoli@genius-gh.com</a></li>
+        <li><span class="lbl">GitHub</span><a href="https://github.com/tipoLi5890">github.com/tipoLi5890</a></li>
+        <li><span class="lbl">ORCID</span><a href="https://orcid.org/0009-0002-6185-3640">0009-0002-6185-3640</a></li>
+        <li><span class="lbl">Medium</span><a href="https://medium.com/@Li_tipo">@Li_tipo</a></li>
+        <li><span class="lbl"><span lang="zh">地點</span><span lang="en">Location</span></span>Taiwan</li>
+      </ul>
+    </div>
+
+    <div class="side-block">
+      <div class="side-h"><span lang="zh">技能</span><span lang="en">Skills</span></div>
+      <ul class="skill">
+        <li><span class="cat">AI / Agentic</span>Claude Code · Codex · opencode</li>
+        <li><span class="cat"><span lang="zh">軟體開發</span><span lang="en">Software</span></span>React · Electron · Python · Flutter</li>
+        <li><span class="cat"><span lang="zh">雲端部署</span><span lang="en">Cloud</span></span>Cloudflare · Firebase</li>
+        <li><span class="cat"><span lang="zh">電路 / PCB</span><span lang="en">Circuit / PCB</span></span>Altium Designer</li>
+        <li><span class="cat"><span lang="zh">3D 設計</span><span lang="en">3D Design</span></span>Fusion 360</li>
+        <li><span class="cat"><span lang="zh">韌體 / 單晶片</span><span lang="en">Firmware / MCU</span></span><span lang="zh">AT 系列 MCU · ESP 系列（Wi-Fi／藍牙）</span><span lang="en">AT-series MCU · ESP-series (Wi-Fi / Bluetooth)</span></li>
+      </ul>
+    </div>
+
+  </aside>
+
+  <main class="main">
+    <!-- 關於 -->
+    <section>
+      <h2><span lang="zh">關於</span><span lang="en">About</span></h2>
+      <div class="entry">
+        <div class="entry-meta"><span class="kind"><span lang="zh">軟硬整合 · 全端 · AI</span><span lang="en">HW–SW · Full-Stack · AI</span></span></div>
+        <div class="entry-body">
+          <p class="lead" lang="zh">我是 tipo，主要是軟體開發，也擅長設計硬體電路等，並整合進軟體應用。平時也常研究各種電路與 AI 應用。</p>
+          <p class="lead" lang="en">I'm tipo. I mainly do software development, and I'm also good at designing hardware circuits and integrating them into software. I often explore different circuit and AI applications.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 經歷 -->
+    <section>
+      <h2><span lang="zh">經歷</span><span lang="en">Experience</span></h2>
+      <div class="entry">
+        <div class="entry-meta">
+          <ol class="timeline">
+            <li><span class="tl-role"><span lang="zh">正職工程師</span><span lang="en">Full-time Engineer</span></span><span class="tl-date"><span lang="zh">2026/06 – 至今</span><span lang="en">2026/06 – Present</span></span></li>
+            <li><span class="tl-role"><span lang="zh">兼職工程師</span><span lang="en">Part-time Engineer</span></span><span class="tl-date">2023/02 – 2026/05</span></li>
+            <li><span class="tl-role"><span lang="zh">實習生</span><span lang="en">Intern</span></span><span class="tl-date">2023/01 – 2023/02</span></li>
+          </ol>
+        </div>
+        <div class="entry-body">
+          <div class="entry-title">Genius Holdings Co., Ltd. — Taiwan Branch</div>
+          <div class="entry-sub" lang="zh">薩摩亞商傑尼斯投資控股有限公司 台灣分公司</div>
+          <ul class="bullets">
+            <li><span lang="zh">設計 MotionAI Sport Tracker（動智運動紀錄器）的 App 軟體與硬體，已於 App Store 與 Google Play 上架。</span><span lang="en">Designed the software and hardware of MotionAI Sport Tracker, shipped on the App Store and Google Play.</span></li>
+            <li><span lang="zh">投入居家睡眠呼吸中止偵測研究：設計 NightSonic 裝置電路、開發 ViT 模型並訓練測試，成果發表於期刊論文。</span><span lang="en">Worked on home sleep-apnea detection — designed the NightSonic device circuit and developed/trained the ViT model; the results were published in a journal.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 專案 -->
+    <section>
+      <h2><span lang="zh">專案</span><span lang="en">Projects</span></h2>
+      <div class="entry">
+        <div class="entry-meta"><span class="kind">App · iOS / Android</span></div>
+        <div class="entry-body">
+          <div class="entry-title">MotionAI Sport Tracker<span lang="zh"> 動智運動紀錄器</span></div>
+          <div class="desc"><span lang="zh">負責 App 軟體與硬體設計，結合 AI 的運動偵測與紀錄。</span><span lang="en">Led software and hardware design — an AI-powered sports motion tracker.</span></div>
+          <div class="links"><a class="link" href="https://apps.apple.com/tw/app/motionai-sport-tracker-%E5%8B%95%E6%99%BA%E9%81%8B%E5%8B%95%E7%B4%80%E9%8C%84%E5%99%A8/id6743618835">App Store</a> · <a class="link" href="https://play.google.com/store/apps/details?id=com.genius_holdings.smartsportai">Google Play</a></div>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-meta"><span class="kind"><span lang="zh">硬體 · 電路設計</span><span lang="en">Hardware · Circuit</span></span></div>
+        <div class="entry-body">
+          <div class="entry-title">NightSonic Sleep Tracker<span lang="zh"> 下顎追蹤裝置</span></div>
+          <div class="desc"><span lang="zh">配戴於下顎的超音波發射裝置，負責電路設計；訊號由智慧型手機麥克風接收，用於居家睡眠呼吸中止偵測研究。</span><span lang="en">A compact ultrasonic emitter worn on the mandible — designed the circuit; its tones are captured by a smartphone microphone for home sleep-apnea detection research.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 研究與專利 -->
+    <section>
+      <h2><span lang="zh">研究與專利</span><span lang="en">Research &amp; Patents</span></h2>
+      <div class="entry tl">
+        <div class="entry-meta"><span class="when">2026</span><span class="kind"><span lang="zh">期刊論文 · 共同作者</span><span lang="en">Journal · Co-author</span></span></div>
+        <div class="entry-body">
+          <div class="entry-title"><a href="https://doi.org/10.1016/j.bspc.2026.110008">Validation of an artificial intelligence-driven novel microphone-based wireless jaw movement and respiratory event detection system for home sleep apnea testing</a></div>
+          <div class="entry-sub">Biomedical Signal Processing and Control · 2026/07</div>
+          <div class="muted"><span lang="zh">研究於 Genius Holdings 任職期間進行。</span><span lang="en">Research conducted during my time at Genius Holdings.</span></div>
+          <div class="muted"><span lang="zh">貢獻：負責 Vision Transformer (ViT) 模型的設計與實作，並參與資料收集與模型訓練、測試。</span><span lang="en">Contribution: designed and implemented the Vision Transformer (ViT) model; contributed to data collection and model training and testing.</span></div>
+          <div class="muted">DOI: 10.1016/j.bspc.2026.110008</div>
+        </div>
+      </div>
+      <div class="entry tl">
+        <div class="entry-meta"><span class="when">2025</span><span class="kind"><span lang="zh">發明專利 · 共同發明人</span><span lang="en">Patent · Co-inventor</span></span></div>
+        <div class="entry-body">
+          <div class="entry-title"><span lang="zh">應用於物理變化現象之聲波標註訓練方法、系統及其設備</span><span lang="en">An Acoustic Annotation Training Method, System, and Device Applied to Physical Change Phenomena</span></div>
+          <div class="entry-sub"><span lang="zh">An Acoustic Annotation Training Method, System, and Device Applied to Physical Change Phenomena</span><span lang="en">應用於物理變化現象之聲波標註訓練方法、系統及其設備</span></div>
+          <div class="muted"><span lang="zh">公開號 TW202534345A · 申請號 TW114107368</span><span lang="en">Publication No. TW202534345A · Application No. TW114107368</span></div>
+          <div class="muted"><span lang="zh">申請日 2025/02/27 · 公開日 2025/09/01</span><span lang="en">Filed 2025/02/27 · Published 2025/09/01</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 學歷 -->
+    <section>
+      <h2><span lang="zh">學歷</span><span lang="en">Education</span></h2>
+      <div class="entry tl">
+        <div class="entry-meta"><span class="when">2026/06</span><span class="kind"><span lang="zh">學士</span><span lang="en">Bachelor</span></span></div>
+        <div class="entry-body">
+          <div class="entry-title"><span lang="zh">國立臺北護理健康大學</span><span lang="en">National Taipei University of Nursing and Health Sciences</span></div>
+          <div class="entry-sub"><span lang="zh">資訊管理系</span><span lang="en">Department of Information Management</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 寫作 -->
+    <section>
+      <h2><span lang="zh">寫作</span><span lang="en">Writing</span></h2>
+      <div class="entry">
+        <div class="entry-meta"><span class="kind">Medium</span></div>
+        <div class="entry-body">
+          <div class="entry-title"><a href="https://medium.com/@Li_tipo">Medium — @Li_tipo</a></div>
+          <div class="desc"><span lang="zh">技術筆記與開發心得。</span><span lang="en">Technical notes and development write-ups.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">© <span id="year">2026</span> Ching-Yu Li · 李慶昱 (tipo) · <span lang="zh">最後更新 2026/06/17</span><span lang="en">Updated 2026/06/17</span></footer>
+  </main>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ching-Yu Li",
+  "alternateName": "李慶昱",
+  "jobTitle": "Software & Hardware Integration Engineer",
+  "email": "mailto:tipo5890Li@gmail.com",
+  "url": "https://tipoli5890.github.io/",
+  "worksFor": { "@type": "Organization", "name": "Genius Holdings Co., Ltd., Taiwan Branch" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "National Taipei University of Nursing and Health Sciences" },
+  "address": { "@type": "PostalAddress", "addressCountry": "TW" },
+  "knowsAbout": ["Embedded firmware", "Circuit and PCB design", "React", "Flutter", "Cloud deployment", "Hardware-software integration", "AI applications"],
+  "sameAs": [
+    "https://github.com/tipoLi5890",
+    "https://orcid.org/0009-0002-6185-3640",
+    "https://medium.com/@Li_tipo"
+  ]
+}
+</script>
+
+<script>
+  (function () {
+    var KEY = 'resume-lang';
+    var root = document.documentElement;
+    var titles = { zh: 'Ching-Yu Li 李慶昱', en: 'Ching-Yu Li' };
+    var btns = document.querySelectorAll('[data-lang-btn]');
+
+    function setLang(lang) {
+      root.setAttribute('data-lang', lang);
+      root.setAttribute('lang', lang === 'zh' ? 'zh-Hant' : 'en');
+      document.title = titles[lang];
+      btns.forEach(function (b) {
+        b.setAttribute('aria-pressed', b.getAttribute('data-lang-btn') === lang ? 'true' : 'false');
+      });
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
+    }
+
+    var stored;
+    try { stored = localStorage.getItem(KEY); } catch (e) {}
+    setLang(stored || ((navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en'));
+
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () { setLang(b.getAttribute('data-lang-btn')); });
+    });
+
+    var y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
